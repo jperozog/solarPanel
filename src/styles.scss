@@ -147,7 +147,7 @@
     justify-content: center;
     align-items: center;
 
- .fondo,.fondo2,.fondo3{
+ .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7{
      display:flex;
      justify-content: center;
      align-items: center;
@@ -242,6 +242,24 @@
  .fondo3{
     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(assets/img/banner3.jpg);
  }
+ .fondo4{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(assets/img/banner4.jpg);
+ }
+
+ .fondo5{
+    background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url(assets/img/whysolar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .fondo6{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(assets/img/banner5.jpg);
+ }
+ .fondo7{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(assets/img/banner6.jpg);
+ }
+
+ 
 
 }
 
@@ -323,6 +341,135 @@
             background-size: cover;
         }
         .card3{
+            background-image:linear-gradient(rgba(255,255,255,1),rgba(0,0,0,0.3)),url(assets/img/panel.jpeg);
+            background-size: cover;
+        }
+       
+    }
+}
+
+.faqs{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: #F9F9F9;
+    .title{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+        h2{
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+    }
+
+    .question{
+        width: 70%;
+
+        h2{
+            font-size: 30px;
+            margin-bottom: 2%;
+        }
+
+        p{
+            font-size: 20px;
+            text-align: justify;
+        }
+    }
+
+    
+
+
+}
+
+.how{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    background-color: #49A015;
+    .title{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+        h2{
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: center;
+            color: white;
+        }
+        p{
+            margin-top: 2%;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    .pictures{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1%;
+        .card,.card2,.card3,.card4{
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 30%;
+            height: 350px;
+            margin-left: 1%;
+            margin-right: 1%;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
+            border-radius: 10px;
+
+            .subtitle{
+                text-align: center;
+                width: 100%;
+                margin-top: 5%;
+                font-weight: 400;
+                color: black;
+                font-size: 30px;
+                margin-bottom: 5%;
+            }
+
+            p{
+                width: 80%;
+                color: black;
+                text-align: center;
+                margin-bottom: 5%;
+                font-size: 20px;
+            }
+        }
+
+        .card{
+            background-image:linear-gradient(rgba(255,255,255,1),rgba(0,0,0,0.3)),url(assets/img/factura.jpg);
+            background-size: cover;
+        }
+        .card2{
+            background-image:linear-gradient(rgba(255,255,255,1),rgba(0,0,0,0.3)),url(assets/img/contable.jpg);
+            background-size: cover;
+        }
+        .card3{
+            background-image:linear-gradient(rgba(255,255,255,1),rgba(0,0,0,0.3)),url(assets/img/graficos.jpg);
+            background-size: cover;
+        }
+        .card4{
             background-image:linear-gradient(rgba(255,255,255,1),rgba(0,0,0,0.3)),url(assets/img/panel.jpeg);
             background-size: cover;
         }
@@ -609,6 +756,119 @@
                 };
             }
         }
+
+        
+
+       
+    }
+}
+
+.clients{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 5%;
+    background-image:linear-gradient(#f8f8f8,#fff);
+    .title{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1%;
+        h2{
+            margin-top: 5%;
+            font-size: 25px;
+            text-align: center;
+        }
+        p{
+            margin-top: 2%;
+            font-size: 30px;
+            color: gray;
+            text-align: center;
+        }
+    }
+
+    .pictures{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        .card,.card2{
+            padding: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 1100px;
+            height: 550px;
+            margin-left: 1%;
+            margin-right: 1%;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
+            border-radius: 10px;
+            position: relative;
+            background-color: white;
+            margin-bottom: 5%;
+
+            .card10{
+                position: absolute;
+                left: 900px;
+                top: 200px;
+                margin: auto;
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 25%;
+                background-color: white;
+                height: auto;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px;
+                border-radius: 10px;
+
+                h3{
+                    margin-bottom: 5%;
+                }
+
+                p{
+                    text-align: left
+                };
+            }
+            .card20{
+                position: absolute;
+                left: -200px;
+                top: 200px;
+                margin: auto;
+                padding: 5%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 25%;
+                background-color: white;
+                height: auto;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px;
+                border-radius: 10px;
+
+                h3{
+                    margin-bottom: 5%;
+                }
+
+                p{
+                    text-align: left
+                };
+            }
+        }
+
+        .card2{
+            margin-left: 40%;
+        }
+
 
         
 

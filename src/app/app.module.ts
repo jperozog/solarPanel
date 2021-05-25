@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WhyComponent } from './components/why/why.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { EmbajadorComponent } from './components/embajador/embajador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingComponent
+    LandingComponent,
+    WhyComponent,
+    FaqComponent,
+    EmbajadorComponent
   ],
   imports: [
     BrowserModule,
