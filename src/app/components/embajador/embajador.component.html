@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="izquierda-derecha">
-        <div class="derecha">
+        <div class="izquierda">
             <div id="menu">
                 <input type="checkbox" id="check">
 
@@ -8,18 +8,21 @@
                     <fa-icon [icon]="faBars"></fa-icon>
                 </label>
                 <ul>
-                    <li><a routerLink="/home">HOME</a></li>
+                    <li><a  routerLink="/">HOME</a></li>
                     <li><a routerLink="/why">POR QUÉ SOLAR</a></li>
                     <li><a routerLink="/faq">FAQ</a></li>
-                    <li><a class="selected" routerLink="/embajador">EMBAJADOR</a></li>
+                    <li><a  class="selected" routerLink="/embajador">EMBAJADOR</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="derecha">
+            <input type="text" placeholder="Escribir Codigo Postal">
+            <button (click)="algo()">Obtener Cotizacion</button>
         </div>
     </div>
 </div>
 
-<carousel [cellsToShow]="1" [height]="resolucion" [autoplay]="true" [autoplayInterval]="3000" [loop]="true"
-    [arrows]="false">
+<div height="1000">
     <div class="carousel-cell tips">
         <div class="fondo7 ">
             <div class="contenidoTips">
@@ -28,7 +31,7 @@
                     <p>Recibe dinero por compartir los beneficios de la energía solar. Y ayúdanos a cambiar el mundo
                     </p>
                     <div class="divBoton">
-                        <div routerLink="/registro" routerLink="/registro" class="boton">
+                        <div (click)="algo2()" class="boton">
                             <p>Registro gratuito</p>
                         </div>
                     </div>
@@ -36,12 +39,12 @@
             </div>
         </div>
     </div>
-</carousel>
+</div>
 
 <div class="providers">
     <div class="title">
         <h2>TODOS GANAN</h2>
-        <p>Cada vez que refieras a un propietario que se convierta en solar con Powur, ganarás $ 1,000. Tu recomendación
+        <p>Cada vez que refieras a un propietario que se convierta en solar con SOLAR TRUST ENERGY, ganarás $ 1,000. Tu recomendación
             te ahorrará miles de dólares en costos de energía. Y el mundo ... bueno, digamos que el mundo también es más
             feliz.</p>
     </div>
@@ -65,6 +68,12 @@
         </p>
         <br>
         <p><b>Guadalupe Pitalua</b>  está aquí para apoyarte como embajador y trabajará directamente con tus clientes para instalar energía solar. ¡Tu y tus clientes están en buenas manos con Guadalupe!</p>
+
+        <div class="divBoton">
+            <div (click)="algo2()" class="boton">
+                <p>Registro gratuito</p>
+            </div>
+        </div>
     </div>
     <div class="cuadro2 cuarto ">
         <div class="title">
@@ -88,19 +97,46 @@
         <br>
         <div class="pasos">
             <p class="paso">3</p>
-            <p>Comparte la factura de la luz con Powur. Recibe $ 1,000 cuando se instale el sistema.
+            <p>Comparte la factura de la luz con SOLAR TRUST ENERGY. Recibe $ 1,000 cuando se instale el sistema.
             </p>
         </div>
         <br>
         <br>
     </div>
-    <div class="cuadro3 tercero">
+    <div class="cuadro10 tercero">
 
     </div>
 
 </div>
 
 <div class="footer">
+    <div class="primeraParte">
+        <div class="izquierda">
+            <h3>SOLAR TRUST ENERGY</h3>
+
+            <a routerLink="/why">POR QUÉ SOLAR</a>
+            <a routerLink="/faq">FAQ</a>
+            <a routerLink="/embajadior">EMBAJADOR</a>
+
+        </div>
+        <div class="centro">
+            <h3>CONTACTANOS</h3>
+
+            <a href="#">1-866-SOLAR-ENERGY</a>
+
+            <h3>EMAIL</h3>
+
+            <a href="#">customercare@powur.com</a>
+
+        </div>
+        <div class="derecha">
+            <h3>OBTENER COTIZACION</h3>
+            <div class="form">
+                <input type="text" placeholder="Escribir Codigo Postal">
+                <button (click)="algo()">Empezar Ahora</button>
+            </div>
+        </div>
+    </div>
     <div class="terceraParte">
         <div class="centro">
             <p>© 2021. All right reserved!</p>

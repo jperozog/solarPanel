@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="izquierda-derecha">
-        <div class="derecha">
+        <div class="izquierda">
             <div id="menu">
                 <input type="checkbox" id="check">
 
@@ -8,15 +8,20 @@
                     <fa-icon [icon]="faBars"></fa-icon>
                 </label>
                 <ul>
-                    <li><a routerLink="/">HOME</a></li>
-                    <li><a routerLink="/why">POR QUÉ SOLAR</a></li>
-                    <li><a class="selected" routerLink="/faq">FAQ</a></li>
+                    <li><a  routerLink="/">HOME</a></li>
+                    <li><a  routerLink="/why">POR QUÉ SOLAR</a></li>
+                    <li><a class="selected"routerLink="/faq">FAQ</a></li>
                     <li><a routerLink="/embajador">EMBAJADOR</a></li>
                 </ul>
             </div>
         </div>
+        <div class="derecha">
+            <input type="text" placeholder="Escribir Codigo Postal">
+            <button (click)="algo()">Obtener Cotizacion</button>
+        </div>
     </div>
 </div>
+
 
 <carousel [cellsToShow]="1" [height]="resolucion" [autoplay]="true" [autoplayInterval]="3000" [loop]="true"
     [arrows]="false">
@@ -24,9 +29,9 @@
         <div class="fondo6 ">
             <div class="contenidoTips">
                 <div class="mensaje">
-                    <h2>PREGUNTAS FRECUENTES SOBRE POWUR SOLAR</h2>
+                    <h2>PREGUNTAS FRECUENTES SOBRE SOLAR TRUST ENERGY SOLAR</h2>
                     <p>Conoce las respuestas a las preguntas más importantes sobre energía solar por parte del CEO de
-                        Powur, Jonathan Budd.</p>
+                        SOLAR TRUST ENERGY, Jonathan Budd.</p>
                     <div class="divBoton">
                         <div routerLink="/registro" routerLink="/registro" class="boton">
                             <p>Comenzar</p>
@@ -124,7 +129,7 @@
     </div>
 
     <div class="question">
-        <h2>¿Cuál es la misión de Powur?</h2>
+        <h2>¿Cuál es la misión de SOLAR TRUST ENERGY?</h2>
 
         <p>Entonces, ¿cómo devuelve el poder? Ese es el propósito de nuestra compañía. Cuando nuestro fundador, Jonathan
             Budd tenía 26 años, fue a la selva amazónica, porque quería cambiar su vida y encontrar una carrera que
@@ -133,7 +138,7 @@
         </p>
         <br>
         <p>Así que los orígenes mismos de nuestra compañía están arraigados en cómo hacemos una diferencia en esta
-            Tierra. Así que Powur se incorporó como una corporación de beneficios públicos, lo que significa que tenemos
+            Tierra. Así que SOLAR TRUST ENERGY se incorporó como una corporación de beneficios públicos, lo que significa que tenemos
             una iniciativa legal en nuestros estatutos corporativos para realmente hacer el bien para el medio ambiente
             y para la sociedad. Así que eso es importante para nosotros.</p>
         <br>
@@ -231,7 +236,7 @@
         <br>
         <p>Te ayudaremos a averiguar lo que es mejor para ti. Cuando recibas una propuesta nuestra, nuestros consultores
             se sentarán contigo. Te mostrarán todas las diferentes opciones y te ayudarán a decidir qué es lo mejor para
-            ti. Te mostrarán cuánto dinero puedes ahorrar con Powur y vamos a hacer lo humanamente posible para que sea
+            ti. Te mostrarán cuánto dinero puedes ahorrar con SOLAR TRUST ENERGY y vamos a hacer lo humanamente posible para que sea
             lo más fácil de entender y tomes tu decisión.</p>
             <br>
     </div>
@@ -271,7 +276,7 @@
             batería durante los momentos más caros del día. En muchas regiones, la política de medición neta te permite
             ahorrar dinero sin la necesidad de la batería, a menos que desees la tranquilidad que proviene de saber que
             tu hogar puede proporcionar electricidad incluso cuando tu compañía de servicios públicos no puede. Pídele
-            más información a tu consultor de Powur. Ellos serán capaces de darte una propuesta detallada de exactamente
+            más información a tu consultor de SOLAR TRUST ENERGY. Ellos serán capaces de darte una propuesta detallada de exactamente
             cuánto costará un sistema con una batería si estás interesado en uno. Trabajamos con todos los mayores
             fabricantes de baterías y podemos asegurarnos absolutamente de que te cuiden, sea cual sea la mejor manera
             para ti.</p>
@@ -317,7 +322,7 @@
         <p>Queremos ser un mejor proveedor de energía. Queremos ahorrarte dinero. Queremos ayudarte a sentirte orgulloso
             de cómo alimentar tu hogar. Y queremos conseguirte todo el mejor equipo, la mejor tecnología para prepararte
             para el futuro. Así que esas son tus dos opciones. Y te dejo a ti elegir. Pero espero verdadera y
-            sinceramente que te cambies a energía solar con Powur. Permítenos ayudarte a ahorrar dinero y acelerar un
+            sinceramente que te cambies a energía solar con SOLAR TRUST ENERGY. Permítenos ayudarte a ahorrar dinero y acelerar un
             futuro energético sostenible para la humanidad.</p>
     </div>
 
@@ -328,6 +333,33 @@
 
 
 <div class="footer">
+    <div class="primeraParte">
+        <div class="izquierda">
+            <h3>SOLAR TRUST ENERGY</h3>
+
+            <a routerLink="/why">POR QUÉ SOLAR</a>
+            <a routerLink="/faq">FAQ</a>
+            <a routerLink="/embajadior">EMBAJADOR</a>
+
+        </div>
+        <div class="centro">
+            <h3>CONTACTANOS</h3>
+
+            <a href="#">1-866-SOLAR-ENERGY</a>
+
+            <h3>EMAIL</h3>
+
+            <a href="#">customercare@powur.com</a>
+
+        </div>
+        <div class="derecha">
+            <h3>OBTENER COTIZACION</h3>
+            <div class="form">
+                <input type="text" placeholder="Escribir Codigo Postal">
+                <button (click)="algo()">Empezar Ahora</button>
+            </div>
+        </div>
+    </div>
     <div class="terceraParte">
         <div class="centro">
             <p>© 2021. All right reserved!</p>

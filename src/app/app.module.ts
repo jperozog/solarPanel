@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WhyComponent } from './components/why/why.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { EmbajadorComponent } from './components/embajador/embajador.component';
+import { JoinComponent } from './components/join/join.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EmbajadorComponent } from './components/embajador/embajador.component';
     LandingComponent,
     WhyComponent,
     FaqComponent,
-    EmbajadorComponent
+    EmbajadorComponent,
+    JoinComponent
   ],
   imports: [
     BrowserModule,

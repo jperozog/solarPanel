@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="izquierda-derecha">
-        <div class="izquierda">
+        <div class="derecha">
             <div id="menu">
                 <input type="checkbox" id="check">
 
@@ -8,20 +8,15 @@
                     <fa-icon [icon]="faBars"></fa-icon>
                 </label>
                 <ul>
-                    <li><a class="selected" routerLink="/">HOME</a></li>
-                    <li><a  routerLink="/why">POR QUÉ SOLAR</a></li>
+                    <li><a class="selected" routerLink="/home">HOME</a></li>
+                    <li><a routerLink="/why">POR QUÉ SOLAR</a></li>
                     <li><a routerLink="/faq">FAQ</a></li>
                     <li><a routerLink="/embajador">EMBAJADOR</a></li>
                 </ul>
             </div>
         </div>
-        <div class="derecha">
-            <input type="text" placeholder="Escribir Codigo Postal">
-            <button (click)="algo()">Obtener Cotizacion</button>
-        </div>
     </div>
 </div>
-
 
 <carousel [cellsToShow]="1" [height]="resolucion" [autoplay]="true" [autoplayInterval]="3000" [loop]="true"
     [dots]="true">
@@ -32,7 +27,7 @@
                     <h2>SIÉNTETE BIEN CON LO QUE IMPULSA TU VIDA.</h2>
                     <p>Clientes Reales. Resultados Reales</p>
                     <div class="divBoton">
-                        <div routerLink="/why" class="boton">
+                        <div routerLink="/registro" routerLink="/registro" class="boton">
                             <p>Ver las historias</p>
                         </div>
                     </div>
@@ -45,11 +40,10 @@
             <div class="contenidoTips">
                 <div class="mensaje">
                     <h2>RECUPERA TU SOLAR TRUST ENERGY</h2>
-                    <p>Escribe tu código postal para ver por qué SOLAR TRUST ENERGY es la mejor solución de energía
-                        solar para
+                    <p>Escribe tu código postal para ver por qué SOLAR TRUST ENERGY es la mejor solución de energía solar para
                         hogares.</p>
                     <div class="divBoton">
-                        <div (click)="algo()" class="boton">
+                        <div routerLink="/registro" routerLink="/registro" class="boton">
                             <p>¡Comenzar!</p>
                         </div>
                     </div>
@@ -66,7 +60,7 @@
                     <p>Click abajo para descubrir por qué y aprende las respuestas a tus preguntas más importantes sobre
                         energía solar.</p>
                     <div class="divBoton">
-                        <div routerLink="/faq" class="boton">
+                        <div routerLink="/registro" routerLink="/registro" class="boton">
                             <p>¡Aprender Como!</p>
                         </div>
                     </div>
@@ -79,8 +73,7 @@
 <div class="providers">
     <div class="title">
         <h2>¿CÓMO RECUPERARÁS TU SOLAR TRUST ENERGY?</h2>
-        <p>SOLAR TRUST ENERGY ofrece soluciones de energía para el hogar que te permiten ahorrar dinero y reducir tu
-            huella de
+        <p>SOLAR TRUST ENERGY ofrece soluciones de energía para el hogar que te permiten ahorrar dinero y reducir tu huella de
             carbono. ¿Qué harás con los resultados?</p>
     </div>
 
@@ -208,8 +201,7 @@
         <p>- Te apoyaremos después de la venta</p>
         <br>
         <br>
-        <p>- Y si lo deseas, te invitamos a compartir la experiencia SOLAR TRUST ENERGY con tus amigos y familiares,
-            para ayudarnos a
+        <p>- Y si lo deseas, te invitamos a compartir la experiencia SOLAR TRUST ENERGY con tus amigos y familiares, para ayudarnos a
             crear un planeta más limpio</p>
     </div>
 </div>
@@ -241,13 +233,12 @@
         <div class="card">
             <div class="card10">
                 <h3>LA MEJOR FORMA</h3>
-                <p>Descubra cómo SOLAR TRUST ENERGY ayudó a estos empresarios hogareños a ahorrar dinero y vivir sus
-                    vidas.</p>
+                <p>Descubra cómo SOLAR TRUST ENERGY ayudó a estos empresarios hogareños a ahorrar dinero y vivir sus vidas.</p>
             </div>
         </div>
 
         <div class="card2">
-
+            
             <div class="card10">
                 <h3>ENERGÍA E INDEPENDENCIA</h3>
                 <p>Vea cómo este cliente de SOLAR TRUST ENERGY se independizó de su compañía de servicios públicos.</p>
@@ -255,7 +246,7 @@
         </div>
 
         <div class="card3">
-
+           
             <div class="card10">
                 <h3>SERVICIOS EN LOS QUE CONFÍAS</h3>
                 <p>Vean por qué los consultores de SOLAR TRUST ENERGY van más allá de la norma.</p>
@@ -266,7 +257,7 @@
 
 </div>
 
-<!--
+
 <div class="ceo">
     <div class="pictures">
         <div class="card">
@@ -279,38 +270,12 @@
     </div>
 
 </div>
--->
+
+
 
 
 
 <div class="footer">
-    <div class="primeraParte">
-        <div class="izquierda">
-            <h3>SOLAR TRUST ENERGY</h3>
-
-            <a routerLink="/why">POR QUÉ SOLAR</a>
-            <a routerLink="/faq">FAQ</a>
-            <a routerLink="/embajadior">EMBAJADOR</a>
-
-        </div>
-        <div class="centro">
-            <h3>CONTACTANOS</h3>
-
-            <a href="#">1-866-SOLAR-ENERGY</a>
-
-            <h3>EMAIL</h3>
-
-            <a href="#">customercare@powur.com</a>
-
-        </div>
-        <div class="derecha">
-            <h3>OBTENER COTIZACION</h3>
-            <div class="form">
-                <input type="text" placeholder="Escribir Codigo Postal">
-                <button (click)="algo()">Empezar Ahora</button>
-            </div>
-        </div>
-    </div>
     <div class="terceraParte">
         <div class="centro">
             <p>© 2021. All right reserved!</p>

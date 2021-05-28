@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="izquierda-derecha">
-        <div class="derecha">
+        <div class="izquierda">
             <div id="menu">
                 <input type="checkbox" id="check">
 
@@ -8,12 +8,16 @@
                     <fa-icon [icon]="faBars"></fa-icon>
                 </label>
                 <ul>
-                    <li><a routerLink="/">HOME</a></li>
+                    <li><a  routerLink="/">HOME</a></li>
                     <li><a class="selected" routerLink="/why">POR QUÉ SOLAR</a></li>
                     <li><a routerLink="/faq">FAQ</a></li>
                     <li><a routerLink="/embajador">EMBAJADOR</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="derecha">
+            <input type="text" placeholder="Escribir Codigo Postal">
+            <button (click)="algo()">Obtener Cotizacion</button>
         </div>
     </div>
 </div>
@@ -25,7 +29,7 @@
             <div class="contenidoTips">
                 <div class="mensaje">
                     <h2>DESCUBRE CUÁNTO PUEDES AHORRAR CON $0 DE PAGO INICIAL SOLAR.</h2>
-                    <p>Powur proporciona energía más limpia y ecológica por menos. Ingresa tu código postal para
+                    <p>SOLAR TRUST ENERGY proporciona energía más limpia y ecológica por menos. Ingresa tu código postal para
                         comenzar.</p>
                     <div class="divBoton">
                         <div routerLink="/registro" routerLink="/registro" class="boton">
@@ -41,7 +45,7 @@
 <div class="clients">
     <div class="title">
         <h2>CONOCE A NUESTROS CLIENTES</h2>
-        <p>Estas son Nuestras Historias de Powur. ¿Cuál es la Tuya?</p>
+        <p>Estas son Nuestras Historias de SOLAR TRUST ENERGY. ¿Cuál es la Tuya?</p>
     </div>
 
     <div class="pictures">
@@ -84,7 +88,7 @@
     </div>
 
     <div class="pictures">
-        <div class="card">
+        <div class="card1">
             <div class="card10">
                 <h3>Voy a recuperar mi energía simplementa haciendo lo que es correcto</h3>
             </div>
@@ -92,7 +96,7 @@
 
         </div>
 
-        <div class="card2">
+        <div class="card0">
             <div class="card20">
                 <h3>Recuperar mi energía significa que tengo electricidad que es confiable</h3>
             </div>
@@ -107,7 +111,7 @@
 <div class="how">
     <div class="title">
         <h2>¿CÓMO FUNCIONA?</h2>
-        <p>Es simple, Powur recolecta tu factura de servicios públicos para que podamos diseñar una propuesta de ahorro
+        <p>Es simple, SOLAR TRUST ENERGY recolecta tu factura de servicios públicos para que podamos diseñar una propuesta de ahorro
             personalizada para tu hogar. Luego, programamos una consulta para revisar tus mejores opciones para ahorrar
             dinero.</p>
     </div>
@@ -135,6 +139,33 @@
 </div>
 
 <div class="footer">
+    <div class="primeraParte">
+        <div class="izquierda">
+            <h3>SOLAR TRUST ENERGY</h3>
+
+            <a routerLink="/why">POR QUÉ SOLAR</a>
+            <a routerLink="/faq">FAQ</a>
+            <a routerLink="/embajadior">EMBAJADOR</a>
+
+        </div>
+        <div class="centro">
+            <h3>CONTACTANOS</h3>
+
+            <a href="#">1-866-SOLAR-ENERGY</a>
+
+            <h3>EMAIL</h3>
+
+            <a href="#">customercare@powur.com</a>
+
+        </div>
+        <div class="derecha">
+            <h3>OBTENER COTIZACION</h3>
+            <div class="form">
+                <input type="text" placeholder="Escribir Codigo Postal">
+                <button (click)="algo()">Empezar Ahora</button>
+            </div>
+        </div>
+    </div>
     <div class="terceraParte">
         <div class="centro">
             <p>© 2021. All right reserved!</p>
