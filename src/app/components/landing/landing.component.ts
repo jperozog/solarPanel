@@ -8,14 +8,22 @@ import Swal from 'sweetalert2'
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  resolucion: number = 1000
+  resolucion:number = 0
+  resolucion2:number = 0
   faBars = faBars;
+  medida:string = "50%"
   constructor() { }
 
   ngOnInit(): void {
-
     this.resolucion = screen.height - 100
-
+    this.resolucion2 = screen.width;
+    
+    if(this.resolucion2 > 1100){
+        this.medida ="50%"
+    }else{
+      this.medida ="90%"
+    }
+    
   }
 
   algo() {
@@ -23,10 +31,10 @@ export class LandingComponent implements OnInit {
     Swal.fire({
       title: '<p class="tituloModal">Felicitaciones, se encuentra en un área privilegiada para el ahorro de energía solar.</p>',
       text: 'Hello world!',
-      width: "50%",
+      width: `${this.medida}`,
       confirmButtonColor: '#49A015',
       confirmButtonText: 'Enviar',
-      position:"bottom",
+      position:"center",
       html: `
             <div class="primeraParteModal">
               <p class="numero">1</p>
