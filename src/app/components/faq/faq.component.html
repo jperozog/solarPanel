@@ -331,7 +331,6 @@
 </div>
 
 
-
 <div class="footer">
     <div class="primeraParte">
         <div class="izquierda">
@@ -339,6 +338,7 @@
 
             <a routerLink="/why">POR QUÉ SOLAR</a>
             <a routerLink="/faq">FAQ</a>
+            <a routerLink="/join">UNETE</a>
             <a routerLink="/embajadior">EMBAJADOR</a>
 
         </div>
@@ -349,14 +349,14 @@
 
             <h3>EMAIL</h3>
 
-            <a href="#">customercare@powur.com</a>
+            <a href="#">customercare@SOLAR TRUST ENERGY.com</a>
 
         </div>
         <div class="derecha">
             <h3>OBTENER COTIZACION</h3>
             <div class="form">
                 <input type="text" placeholder="Escribir Codigo Postal">
-                <button (click)="algo()">Empezar Ahora</button>
+                <button (click)="openModal()">Empezar Ahora</button>
             </div>
         </div>
     </div>
@@ -367,4 +367,71 @@
         </div>
     </div>
 
+</div>
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p class="tituloModal">Felicitaciones, se encuentra en un área privilegiada para el ahorro de energía solar.</p>
+        <div class="primeraParteModal">
+            <p class="numero">1</p>
+            <h3>¿A CUÁNTO ASCIENDE TU FACTURA DE LUZ TÍPICA?</h3>
+            <input type="text" placeholder="$0" [(ngModel)]="cotiza.factura" >
+        </div>
+        <div class="segundaParteModal">
+            <p class="numero">2</p>
+            <h3>CUÉNTANOS MÁS SOBRE TI</h3>
+            <div class="inputs">
+                <div class="input">
+                    <label>NOMBRE</label>
+                    <input type="text" [(ngModel)]="cotiza.nombre">
+                </div>
+                <div class="input">
+                    <label>APELLIDO</label>
+                    <input type="text" [(ngModel)]="cotiza.apellido">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="input2">
+                    <label>CALLE</label>
+                    <input type="text" [(ngModel)]="cotiza.calle">
+                </div>
+                <div class="input3">
+                    <label>UNIDAD</label>
+                    <input type="text" [(ngModel)]="cotiza.unidad">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="input4">
+                    <label>CIUDAD</label>
+                    <input type="text" [(ngModel)]="cotiza.ciudad">
+                </div>
+                <div class="input3">
+                    <label>ESTADO</label>
+                    <input type="text" [(ngModel)]="cotiza.estado">
+                </div>
+                <div class="input3">
+                    <label>CODIGO POSTAL</label>
+                    <input type="text" [(ngModel)]="cotiza.codigopostal">
+                </div>
+            </div>
+
+            <div class="inputs">
+                <div class="input">
+                    <label>TELEFONO</label>
+                    <input type="text" [(ngModel)]="cotiza.telefono">
+                </div>
+                <div class="input">
+                    <label>EMAIL</label>
+                    <input type="text" [(ngModel)]="cotiza.correo">
+                </div>
+            </div>
+
+            <button *ngIf=" cotiza.factura > 0 &&cotiza.nombre != ''  && cotiza.apellido != '' && cotiza.calle != '' && cotiza.unidad != '' && cotiza.ciudad != '' && cotiza.estado != '' && cotiza.codigopostal != ''  && cotiza.telefono.length >= 9 && cotiza.correo.includes('@') && cotiza.correo.includes('.com')" (click)="enviarCotizacion()"> Enviar Datos</button>
+        </div>
+
+
+    </div>
 </div>

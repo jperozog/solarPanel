@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './components/landing/landing.component';
@@ -10,6 +10,9 @@ import { WhyComponent } from './components/why/why.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { EmbajadorComponent } from './components/embajador/embajador.component';
 import { JoinComponent } from './components/join/join.component';
+import {CortizacionService} from './services/cortizacion.service'
+import {HttpClientModule} from '@angular/common/http'
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,12 @@ import { JoinComponent } from './components/join/join.component';
     BrowserModule,
     AppRoutingModule,
     IvyCarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    MatDialogModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CortizacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

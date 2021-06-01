@@ -1,6 +1,6 @@
 <div class="navbar">
     <div class="izquierda-derecha">
-        <div class="derecha">
+        <div class="izquierda">
             <div id="menu">
                 <input type="checkbox" id="check">
 
@@ -8,274 +8,185 @@
                     <fa-icon [icon]="faBars"></fa-icon>
                 </label>
                 <ul>
-                    <li><a class="selected" routerLink="/home">CASA</a></li>
+                    <li><a routerLink="/">CASA</a></li>
                     <li><a routerLink="/why">POR QUÉ SOLAR</a></li>
                     <li><a routerLink="/faq">FAQ</a></li>
                     <li><a routerLink="/embajador">EMBAJADOR</a></li>
                 </ul>
             </div>
         </div>
+        <div class="derecha">
+            <input type="text" placeholder="Escribir Codigo Postal">
+            <button id="myBtn" (click)="openModal()">Obtener Cotizacion</button>
+        </div>
     </div>
 </div>
 
-<carousel [cellsToShow]="1" [height]="resolucion" [autoplay]="true" [autoplayInterval]="3000" [loop]="true"
-    [dots]="true">
+<div height="1000">
     <div class="carousel-cell tips">
-        <div class="fondo ">
-            <div class="contenidoTips">
-                <div class="mensaje">
-                    <h2>SIÉNTETE BIEN CON LO QUE IMPULSA TU VIDA.</h2>
-                    <p>Clientes Reales. Resultados Reales</p>
-                    <div class="divBoton">
-                        <div routerLink="/registro" routerLink="/registro" class="boton">
-                            <p>Ver las historias</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="carousel-cell tips">
-        <div class="fondo3">
+        <div class="fondo8 ">
             <div class="contenidoTips">
                 <div class="mensaje">
                     <h2>RECUPERA TU SOLAR TRUST ENERGY</h2>
-                    <p>Escribe tu código postal para ver por qué SOLAR TRUST ENERGY es la mejor solución de energía solar para
-                        hogares.</p>
+                    <p>Vean por qué los mejores profesionales de la energía solar están construyendo su futuro con SOLAR
+                        TRUST ENERGY
+                    </p>
                     <div class="divBoton">
-                        <div routerLink="/registro" routerLink="/registro" class="boton">
-                            <p>¡Comenzar!</p>
+                        <div (click)="openModal2()" class="boton">
+                            <p>Unete Ahora</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="carousel-cell tips">
-        <div class="fondo2">
-            <div class="contenidoTips">
-                <div class="mensaje">
-                    <h2>¿SABÍAS QUE LA ENERGÍA SOLAR TE PUEDE AHORRAR EN PROMEDIO $26,000 EN COSTOS DE ELECTRICIDAD A LO
-                        LARGO DE 20 AÑOS?</h2>
-                    <p>Click abajo para descubrir por qué y aprende las respuestas a tus preguntas más importantes sobre
-                        energía solar.</p>
-                    <div class="divBoton">
-                        <div routerLink="/registro" routerLink="/registro" class="boton">
-                            <p>¡Aprender Como!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</carousel>
-
-<div class="providers">
-    <div class="title">
-        <h2>¿CÓMO RECUPERARÁS TU SOLAR TRUST ENERGY?</h2>
-        <p>SOLAR TRUST ENERGY ofrece soluciones de energía para el hogar que te permiten ahorrar dinero y reducir tu huella de
-            carbono. ¿Qué harás con los resultados?</p>
-    </div>
-
-    <div class="pictures">
-        <div class="card">
-            <p class="subtitle">EST. CARBONO RETIRADO</p>
-            <p>1.000.0000 +</p>
-        </div>
-
-        <div class="card2">
-            <p class="subtitle">EST. AHORROS DE LOS CLIENTES DE SOLAR TRUST ENERGY</p>
-            <p>1.000.0000 $</p>
-        </div>
-
-        <div class="card3">
-            <p class="subtitle">EST. KHW PRODUCIDOS</p>
-            <p>1.000.0000 KW/H</p>
-        </div>
-
-    </div>
-
 </div>
 
 
 <div class="cuadros">
-    <div class="cuadro ">
+    <div class="cuadro100 ">
 
     </div>
     <div class="cuadro2 ">
         <div class="title">
-            <h2>DIFERENCIA SOLAR TRUST ENERGY</h2>
-            <p>Tu solución para obtener energía confiable, limpia y de bajo costo en la que tu familia puede confiar.
+            <h2>CONFIANZA Y TRANSPARENCIA</h2>
+            <p>Maximiza tu potencial
             </p>
         </div>
         <br>
         <br>
-        <p>- Financieramente seguro: respaldado por inversionstas y propiedad de miembros
-        </p>
-        <br>
-        <br>
-        <p>- Experimentados: más de 5,000 instalaciones exitosas
-        </p>
-        <br>
-        <br>
-        <p>- Hacer el bien haciendo el bien: B-Corp totalmente certificado</p>
-        <br>
-        <br>
-        <p>- Validación: Inc.1000 empresa de más rápido crecimiento en América</p>
-        <br>
-        <br>
-        <p>- Centrado en el impacto: el dinero de cada instalación se destina a preservar millones de acres de la selva
-            amazónica</p>
-        <br>
-        <br>
-        <p>- Récord: primera empresa solar en compensar el 100% de las emisiones del proceso de fabricación solar</p>
+        <p>El modelo revolucionario de SOLAR TRUST ENERGY te brinda total transparencia sobre el costo de cada proyecto solar que
+            vendes y una comisión líder en la industria.</p>
     </div>
     <div class="cuadro2 cuarto ">
         <div class="title">
-            <h2>EL PROCESO SOLAR TRUST ENERGY</h2>
-            <p>Es un proceso simple que solamente requiere tu factura de energía eléctrica para comenzar.
+            <h2>REMOTO Y FLEXIBLE</h2>
+            <p>Trabajar en Cualquier Lugar
             </p>
         </div>
         <br>
-        <br>
-        <div class="pasos">
-            <p class="paso">PASO 1</p>
-            <p>- Recolectar tu factura de energía </p>
-        </div>
-        <br>
-        <br>
-        <div class="pasos">
-            <p class="paso">PASO 2</p>
-            <p>- Revisar una Propuesta Personalizada </p>
-        </div>
-        <br>
-        <br>
-        <div class="pasos">
-            <p class="paso">PASO 3</p>
-            <p>- Selecciona el Mejor Plan </p>
-        </div>
-        <br>
-        <br>
-        <div class="pasos">
-            <p class="paso">PASO 4</p>
-            <p>- Firma el Contrato </p>
-        </div>
-        <br>
-        <br>
-        <div class="pasos">
-            <p class="paso">PASO 5</p>
-            <p>- Comienza </p>
-        </div>
-        <br>
+        <p>SOLAR TRUST ENERGY es la primera empresa de energía solar virtual del mundo. Nuestra plataforma te permite trabajar donde
+            quieras, cuando quieras y con el apoyo que necesitas para cumplir tus proyectos con calidad y rapidez
+            líderes en la industria.</p>
         <br>
     </div>
-    <div class="cuadro3 tercero">
+    <div class="cuadro101 tercero">
 
     </div>
-    <div class="cuadro4">
+    <div class="cuadro102">
 
     </div>
-    <div class="cuadro2 ">
+    <div class="cuadro2 quinto ">
         <div class="title">
-            <h2>LA PROMESA SOLAR TRUST ENERGY</h2>
-            <p>Esto es lo que te prometemos
+            <h2>MODELO SUSTENTABLE</h2>
+            <p>Generar Ingreso Pasivo
             </p>
         </div>
         <br>
-        <br>
-        <p>- Siempre proporcionaremos el mejor valor
+        <p>Creemos en el equilibrio entre el trabajo y la vida personal. Los consultores de SOLAR TRUST ENERGY obtienen ingresos de
+            los consultores que refieren a la plataforma, pagados por SOLAR TRUST ENERGY, y no reducen la comisión de un consultor.
         </p>
+    </div>
+
+    <div class="cuadro2 sexto">
+        <div class="title">
+            <h2>PARTICIPACIÓN EN EL CAPITAL</h2>
+            <p>Invierte en Tu Futuro
+            </p>
+        </div>
         <br>
+        <p>SOLAR TRUST ENERGY ha creado un programa de propiedad de acciones por primera vez en la industria para nuestros
+            consultores. Creemos que usted y su familia deben tener la oportunidad de crear riqueza al desempeñar su
+            papel en la construcción de una empresa líder mundial en energía limpia.</p>
         <br>
-        <p>- Te trataremos como a nuestros amigos y familiares, porque lo eres
+    </div>
+    <div class="cuadro103 tercero">
+
+    </div>
+    <div class="cuadro104">
+
+    </div>
+    <div class="cuadro2 septimo ">
+        <div class="title">
+            <h2>A PRUEBA DEL FUTURO</h2>
+            <p>Innova con nosotros
+            </p>
+        </div>
+        <br>
+        <p>La plataforma SOLAR TRUST ENERGY es una tecnología patentada creada para gestionar tus proyectos solares de principio a
+            fin. Con propuestas, diseños, contratos, comisiones y cumplimiento de proyectos automatizados ... nunca
+            tendrás que preocuparte de que la tecnología sea el cuello de botella para hacer crecer su negocio.
         </p>
-        <br>
-        <br>
-        <p>- Brindaremos una diversidad de productos, servicios e ideas para entregar la mejor solución para TUS
-            necesidades.</p>
-        <br>
-        <br>
-        <p>- Nos comunicaremos contigo de manera honesta y abierta durante todo el proceso de instalación</p>
-        <br>
-        <br>
-        <p>- Te apoyaremos después de la venta</p>
-        <br>
-        <br>
-        <p>- Y si lo deseas, te invitamos a compartir la experiencia SOLAR TRUST ENERGY con tus amigos y familiares, para ayudarnos a
-            crear un planeta más limpio</p>
-    </div>
-</div>
-
-<div class="data">
-    <div class="fact">
-        <p>"SOLAR TRUST ENERGY permite a las personas agregar energía solar a los hogares sin costos iniciales"</p>
-    </div>
-
-    <div class="fact">
-        <p>"SOLAR TRUST ENERGY ocupa el puesto 938 en la lista Inc.5000 de empresas de más rápido crecimiento"</p>
     </div>
 
 
-    <div class="fact">
-        <p>"SOLAR TRUST ENERGY proporciona energía limpia y confiable a costos significativamente más bajos"</p>
-    </div>
 </div>
 
 
 <div class="mision">
     <div class="title">
         <h2>MILLONES DE RAZONES. UNA MISIÓN</h2>
-        <p>Cada propietario tiene su propia razón por la que ha abandonado a su compañía de servicios públicos y se ha
-            pasado a la energía solar. Escuche sus historias.</p>
+        <p>Cada consultor tiene su propia razón por la que ha elegido SOLAR TRUST ENERGY para construir su futuro. Escucha sus
+            historias.</p>
     </div>
 
-    <div class="pictures">
+    <div class="pictures2">
         <div class="card">
             <div class="card10">
-                <h3>LA MEJOR FORMA</h3>
-                <p>Descubra cómo SOLAR TRUST ENERGY ayudó a estos empresarios hogareños a ahorrar dinero y vivir sus vidas.</p>
+                <h3>INDEPENDENCIA FINANCIERA</h3>
+                <p>Vea cómo SOLAR TRUST ENERGY le dio a esta mujer emprendedora su máxima seguridad financiera.</p>
             </div>
         </div>
 
         <div class="card2">
-            
+
             <div class="card10">
-                <h3>ENERGÍA E INDEPENDENCIA</h3>
-                <p>Vea cómo este cliente de SOLAR TRUST ENERGY se independizó de su compañía de servicios públicos.</p>
+                <h3>LAS CUATRO LIBERTADES</h3>
+                <p>Descubre los muchos tipos de Libertad que SOLAR TRUST ENERGY te puede ofrecer.</p>
             </div>
         </div>
 
         <div class="card3">
-           
+
             <div class="card10">
-                <h3>SERVICIOS EN LOS QUE CONFÍAS</h3>
-                <p>Vean por qué los consultores de SOLAR TRUST ENERGY van más allá de la norma.</p>
+                <h3>OPORTUNIDAD VIRTUAL</h3>
+                <p>Ver por qué la plataforma SOLAR TRUST ENERGY ofrece un estilo de vida y una comunidad sin precedentes.</p>
             </div>
         </div>
 
     </div>
 
 </div>
-
-
-<div class="ceo">
-    <div class="pictures">
-        <div class="card">
-            <div class="card10">
-                <h3>JUNTOS, ESTAMOS DEVOLVIENDO</h3>
-                <p>Un mensaje del CEO de SOLAR TRUST ENERGY</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-
-
 
 <div class="footer">
+    <div class="primeraParte">
+        <div class="izquierda">
+            <h3>SOLAR TRUST ENERGY</h3>
+
+            <a routerLink="/why">POR QUÉ SOLAR</a>
+            <a routerLink="/faq">FAQ</a>
+            <a routerLink="/join">UNETE</a>
+            <a routerLink="/embajadior">EMBAJADOR</a>
+
+        </div>
+        <div class="centro">
+            <h3>CONTACTANOS</h3>
+
+            <a href="#">1-866-SOLAR-ENERGY</a>
+
+            <h3>EMAIL</h3>
+
+            <a href="#">customercare@SOLAR TRUST ENERGY.com</a>
+
+        </div>
+        <div class="derecha">
+            <h3>OBTENER COTIZACION</h3>
+            <div class="form">
+                <input type="text" placeholder="Escribir Codigo Postal">
+                <button (click)="openModal()">Empezar Ahora</button>
+            </div>
+        </div>
+    </div>
     <div class="terceraParte">
         <div class="centro">
             <p>© 2021. All right reserved!</p>
@@ -283,4 +194,118 @@
         </div>
     </div>
 
+</div>
+
+
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p class="tituloModal">Felicitaciones, se encuentra en un área privilegiada para el ahorro de energía solar.</p>
+        <div class="primeraParteModal">
+            <p class="numero">1</p>
+            <h3>¿A CUÁNTO ASCIENDE TU FACTURA DE LUZ TÍPICA?</h3>
+            <input type="text" placeholder="$0" [(ngModel)]="cotiza.factura" >
+        </div>
+        <div class="segundaParteModal">
+            <p class="numero">2</p>
+            <h3>CUÉNTANOS MÁS SOBRE TI</h3>
+            <div class="inputs">
+                <div class="input">
+                    <label>NOMBRE</label>
+                    <input type="text" [(ngModel)]="cotiza.nombre">
+                </div>
+                <div class="input">
+                    <label>APELLIDO</label>
+                    <input type="text" [(ngModel)]="cotiza.apellido">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="input2">
+                    <label>CALLE</label>
+                    <input type="text" [(ngModel)]="cotiza.calle">
+                </div>
+                <div class="input3">
+                    <label>UNIDAD</label>
+                    <input type="text" [(ngModel)]="cotiza.unidad">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="input4">
+                    <label>CIUDAD</label>
+                    <input type="text" [(ngModel)]="cotiza.ciudad">
+                </div>
+                <div class="input3">
+                    <label>ESTADO</label>
+                    <input type="text" [(ngModel)]="cotiza.estado">
+                </div>
+                <div class="input3">
+                    <label>CODIGO POSTAL</label>
+                    <input type="text" [(ngModel)]="cotiza.codigopostal">
+                </div>
+            </div>
+
+            <div class="inputs">
+                <div class="input">
+                    <label>TELEFONO</label>
+                    <input type="text" [(ngModel)]="cotiza.telefono">
+                </div>
+                <div class="input">
+                    <label>EMAIL</label>
+                    <input type="text" [(ngModel)]="cotiza.correo">
+                </div>
+            </div>
+
+            <button *ngIf=" cotiza.factura > 0 &&cotiza.nombre != ''  && cotiza.apellido != '' && cotiza.calle != '' && cotiza.unidad != '' && cotiza.ciudad != '' && cotiza.estado != '' && cotiza.codigopostal != ''  && cotiza.telefono.length >= 9 && cotiza.correo.includes('@') && cotiza.correo.includes('.com')" (click)="enviarCotizacion()"> Enviar Datos</button>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div id="myModal2" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" (click)="closeModal2()">&times;</span>
+        <p class="tituloModal">Únete a la revolución energética con SOLAR TRUST ENERGY</p>
+        <div class="terceraParteModal">
+            <h3>TU INFORMACIÓN</h3>
+            <div class="inputs">
+                <div class="input">
+                    <label>NOMBRE</label>
+                    <input type="text" [(ngModel)]="regis.nombre">
+                </div>
+                <div class="input">
+                    <label>APELLIDO</label>
+                    <input type="text" [(ngModel)]="regis.apellido">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="input">
+                    <label>TELEFONO</label>
+                    <input type="text" [(ngModel)]="regis.telefono">
+                </div>
+                <div class="input">
+                    <label>EMAIL</label>
+                    <input type="text" [(ngModel)]="regis.correo">
+                </div>
+                <div class="input">
+                    <label>PREFERENCIA DE IDIOMA</label>
+                    <select [(ngModel)]="regis.idioma" name="select">
+                        <option value="Español">Español</option>
+                        <option value="Ingles">Ingles</option>
+                    </select>
+                </div>
+            </div>
+
+            <button
+                *ngIf="regis.nombre != ''  && regis.apellido != ''  && regis.idioma != '' && regis.telefono.length >= 9 && regis.correo.includes('@') && regis.correo.includes('.com')"
+                (click)="enviarRegistro()"> Enviar Datos</button>
+        </div>
+
+
+    </div>
 </div>

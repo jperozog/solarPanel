@@ -3,7 +3,54 @@
     font-family: 'KoHo', sans-serif;
     margin: 0;
     padding: 0;
+
 }
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
 .navbar{
     position: fixed; 
     top: 0; 
@@ -176,7 +223,7 @@
     z-index: -9999999999;
     height: 850px;
 
- .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7{
+ .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7,.fondo8{
      display:flex;
      justify-content: center;
      align-items: center;
@@ -195,6 +242,7 @@
         color: white;
         padding-top:5% ;
         padding-bottom: 5%;
+        line-height: 1;
     }
 
     p{
@@ -287,6 +335,9 @@
  }
  .fondo7{
     background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(assets/img/banner6.jpg);
+ }
+ .fondo8{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.3)),url(assets/img/banner8.jpg);
  }
 
  
@@ -505,7 +556,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-.cuadro,.cuadro3,.cuadro4,.cuadro10{
+.cuadro,.cuadro3,.cuadro4,.cuadro10,.cuadro100,.cuadro101,.cuadro102,.cuadro103,.cuadro104{
     width: 50%;
     height: 1000px;
     display: flex;
@@ -533,6 +584,26 @@
 .cuadro10{
     background-image: url("./assets/img/pasos.jpg");
     background-position:left ;
+}
+.cuadro100{
+    background-image: url("./assets/img/potencial.jpg");
+    background-position:top ;
+}
+.cuadro101{
+    background-image: url("./assets/img/remoto.jpg");
+    background-position:top ;
+}
+.cuadro102{
+    background-image: url("./assets/img/ingreso.jpg");
+    background-position:top ;
+}
+.cuadro103{
+    background-image: url("./assets/img/capital.jpg");
+    background-position:top ;
+}
+.cuadro104{
+    background-image: url("./assets/img/dashboard.jpg");
+    background-position:top ;
 }
 .cuadro0{
     width: 50%;
@@ -715,7 +786,7 @@
         }
     }
 
-    .pictures{
+    .pictures,.pictures2{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -781,6 +852,22 @@
         
 
        
+    }
+
+    .pictures2{
+        .card{
+            background-image:url(assets/img/mujer.jpg);
+            background-size: cover;
+        }
+        .card2{
+            background-image:url(assets/img/hombre.jpg);
+            background-size: cover;
+            background-position: top;
+        }
+        .card3{
+            background-image:url(assets/img/ejecutivo.jpg);
+            background-size: cover;
+        }
     }
 }
 .ceo{
@@ -1116,8 +1203,11 @@
 
 } 
 .tituloModal{
+    font-size: 35px;
     color: #49A015;
     padding: 0;
+    text-align: center;
+    margin-bottom: 1%;
 }
 .primeraParteModal{
     flex-direction: column;
@@ -1215,6 +1305,15 @@
     }
     }
 
+    button{
+        background-color: #49A015;
+        color: white;
+        padding: 2% 4%;
+        border: none;
+        margin-top: 2%;
+        cursor: pointer;
+    }
+
    
 }
 .terceraParteModal{
@@ -1276,7 +1375,14 @@
             border-radius: 2px;
         }
      }   
-
+    }
+    button{
+        background-color: #49A015;
+        color: white;
+        padding: 2% 4%;
+        border: none;
+        margin-top: 2%;
+        cursor: pointer;
     }
 
    
@@ -1360,7 +1466,7 @@
 
     .tips{
     
-     .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7{
+     .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7,.fondo8{
         
         h2{
             font-size: 40px;
@@ -1491,7 +1597,7 @@
             }
         }
     
-        .pictures{
+        .pictures, .pictures2{
             align-self: flex-start;
             display: flex;
             flex-direction: column;
@@ -1543,6 +1649,14 @@
                 background-position: center;
             }
            
+        }
+
+        .pictures2{
+            .card2{
+                background-image:url(assets/img/hombre.jpg);
+                background-size: cover;
+                background-position: center;
+            }
         }
     }
 
@@ -1618,7 +1732,10 @@
            
         }
     }
-    
+    .modal-content {
+        margin-top: 15%;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
 
 
   } 
@@ -1628,7 +1745,7 @@
 
     .tips{
     
-     .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7{
+     .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7,.fondo8{
     
         h2{
             font-weight: 400;
@@ -1689,7 +1806,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     
-    .cuadro,.cuadro3,.cuadro4,.cuadro10{
+    .cuadro,.cuadro3,.cuadro4,.cuadro10,.cuadro100,.cuadro101,.cuadro102,.cuadro103,.cuadro104{
         width: 50%;
         height: 800px;
     }  
@@ -1777,7 +1894,7 @@
             }
         }
     
-        .pictures{
+        .pictures,  .pictures2{
             .card,.card2,.card3{
                 width: 600px;
                
@@ -1789,6 +1906,13 @@
                 }
             }
            
+        }
+        .pictures2{
+            .card2{
+                background-image:url(assets/img/hombre.jpg);
+                background-size: cover;
+                background-position: center;
+            }
         }
     }
 
@@ -1839,6 +1963,11 @@
             }  
         }
     }
+
+    .modal-content {
+        margin-top: 15%;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
     
 
   } 
@@ -1924,7 +2053,7 @@
 
     .tips{
     
-        .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7{
+        .fondo,.fondo2,.fondo3,.fondo4,.fondo5,.fondo6,.fondo7,.fondo8{
          
            h2{
                font-size: 20px;
@@ -2005,13 +2134,22 @@
         display: flex;
         flex-direction: column;
     
-    .cuadro,.cuadro3,.cuadro4,.cuadro10{
+    .cuadro,.cuadro3,.cuadro4,.cuadro10,.cuadro100,.cuadro101,.cuadro102,.cuadro103,.cuadro104{
         width: 100%;
         height: 500px;     
     }  
 
     .cuadro3{
         order: 3;
+    }
+    .cuadro102{
+        order: 5;
+    }
+    .cuadro103{
+        order: 7;
+    }
+    .cuadro104{
+        order: 9;
     }
     .cuadro0{
         width: 100%;
@@ -2086,6 +2224,15 @@
 
         &.cuarto{
             order: 4;
+        }
+        &.quinto{
+            order: 6;
+        }
+        &.sexto{
+            order: 8;
+        }
+        &.septimo{
+            order: 10;
         }
     }  
     
@@ -2294,6 +2441,80 @@
         }
     }
 
+    .mision{
+
+        .title{
+            width: 90%;
+            h2{
+               
+                font-size: 20px;
+             
+            }
+            p{
+
+                font-size: 17px;
+             
+            }
+        }
+    
+        .pictures,  .pictures2{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .card,.card2,.card3{
+                padding: 1%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 320px;
+                height: 150px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
+                border-radius: 0px;
+                position: relative;
+    
+    
+                p{
+                    width: 80%;
+                    color: black;
+                    text-align: center;
+                    margin-bottom: 5%;
+                    font-size: 20px;
+                }
+    
+                .card10{
+                    position: absolute;
+                    top: 20px;
+                    margin: auto;
+                    padding: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 10%;
+                    background-color: white;
+                    height: auto;
+                    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px;
+                    border-radius: 10px;
+    
+                    h3{
+                        margin-bottom: 2%;
+                        font-size: 10px;
+                    }
+                }
+            }
+   
+        }
+
+        .pictures2{
+            .card2{
+                background-image:url(assets/img/hombre.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
     .how{
         .title{
             width: 90%;
@@ -2335,7 +2556,7 @@
         .numero{
             background-color: #49A015;
             border-radius: 50%;
-            padding: 0% 2%;
+            padding: 0% 3%;
             color: white;
             margin-bottom: 4%;
             font-size: 25px;
@@ -2345,10 +2566,11 @@
         h3{
             margin-bottom: 1%;
             font-size: 12px;
+            text-align: center;
         }
     
         input{
-            width: 50%;
+            width: 25%;
             border: none;
             border-bottom: 2px solid black;
             height: 20px;
@@ -2383,16 +2605,16 @@
         .inputs{
             width: 100%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             margin-top: 2%;
          .input,.input2,.input3,.input4{
-             width: 48%;
+             width: 90%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             
             label{
                 color: gray;
@@ -2401,7 +2623,7 @@
                 font-size: 8px;
             }
             input{
-                width: 100%;
+                width: 70%;
                 height: 20px;
                 outline: none;
                 padding: 1%;
@@ -2410,19 +2632,6 @@
                 
             }
          }   
-    
-         .input2{
-             width: 70%;
-             
-         }
-         .input3{
-             width: 25%;
-    
-         }
-         .input4{
-            width: 40%;
-    
-        }
         }
     
        
@@ -2493,5 +2702,11 @@
     
        
     }
+
+    .modal-content {
+        margin-top: 30%;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
     
   }
+

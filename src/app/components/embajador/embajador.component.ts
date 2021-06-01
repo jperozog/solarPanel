@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
+import { cotizacion } from '../../models/cotizacion'
+import { CortizacionService } from '../../services/cortizacion.service'
+import {registro} from '../../models/registro'
 
 @Component({
   selector: 'app-embajador',
@@ -13,8 +16,27 @@ export class EmbajadorComponent implements OnInit {
   faBars = faBars;
   medida:string = "50%"
   posicion:string = "center"
+  cotiza: cotizacion = {
+    factura: 0,
+    nombre: "",
+    apellido: "",
+    calle: "",
+    unidad: "",
+    ciudad: "",
+    estado: "",
+    codigopostal: "",
+    telefono: "",
+    correo: "",
+  }
+  regis : registro ={
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    correo: "",
+    idioma:""
+  }
 
-  constructor() { }
+  constructor( private cotizacionService: CortizacionService) { }
 
   ngOnInit(): void {
     this.resolucion = screen.height - 100
@@ -121,43 +143,7 @@ export class EmbajadorComponent implements OnInit {
       customClass: {
         container: 'my-swal'
       },
-      position:"center",
-      html: `
-            <div class="terceraParteModal">
-              <h3>TU INFORMACION</h3>
-              <div class="inputs">
-                <div class="input">
-                  <label>NOMBRE</label>
-                  <input type="text" >
-                </div>
-             
-
-                <div class="input">
-                  <label>APELLIDO</label>
-                  <input type="text" >
-                </div>
-
-                <div class="input">
-                  <label>TELEFONO</label>
-                  <input type="text" >
-                </div>
-             
-
-                <div class="input">
-                  <label>EMAIL</label>
-                  <input type="text" >
-                </div>
-
-                <div class="input">
-                  <label>PREFERENCIA DE IDIOMA</label>
-                  <select name="select">
-                  <option value="value1" selected>Español</option>
-                  <option value="value2" >Ingles</option>
-                  </select>
-                </div>
-
-              </div>
-            </div>`,
+      position:"center"
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
@@ -168,4 +154,98 @@ export class EmbajadorComponent implements OnInit {
       }
     })
   }
+
+
+  closeModal() {
+    
+    let modal = document.getElementById("myModal") as HTMLElement;
+
+      modal.style.display = "none";
+
+     this.cotiza = {
+      factura: 0,
+      nombre: "",
+      apellido: "",
+      calle: "",
+      unidad: "",
+      ciudad: "",
+      estado: "",
+      codigopostal: "",
+      telefono: "",
+      correo: "",
+     } 
+
+  }
+
+
+  openModal() {
+    // Get the modal
+    let modal = document.getElementById("myModal") as HTMLElement;
+
+      modal.style.display = "block";
+      
+   console.log("algo")
+
+   
+  }
+
+  closeModal2() {
+    
+    let modal2 = document.getElementById("myModal2") as HTMLElement;
+
+      modal2.style.display = "none";
+
+      this.regis ={
+        nombre: "",
+        apellido: "",
+        telefono: "",
+        correo: "",
+        idioma:""
+      }
+
+  }
+
+
+  openModal2() {
+    // Get the modal
+    let modal2 = document.getElementById("myModal2") as HTMLElement;
+
+      modal2.style.display = "block";
+      
+   console.log("algo")
+
+   
+  }
+
+
+  enviarCotizacion(){
+
+    this.cotizacionService.enviarDatosCotizacion(this.cotiza).subscribe(
+      res => {
+        console.log(res),
+        Swal.fire(
+          'Datos Enviados',
+          'Sus datos fueron enviados Correctamente!',
+          'success'
+        ),
+        this.closeModal()
+      }, err => console.log(err))
+
+  }
+
+  enviarRegistro(){
+
+    this.cotizacionService.enviarDatosRegistro(this.regis).subscribe(
+      res => {
+        console.log(res),
+        Swal.fire(
+          'Datos Enviados',
+          'Sus datos fueron enviados Correctamente!',
+          'success'
+        ),
+        this.closeModal2()
+      }, err => console.log(err))
+
+  }
+
 }
