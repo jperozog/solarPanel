@@ -13,6 +13,7 @@ import { JoinComponent } from './components/join/join.component';
 import {CortizacionService} from './services/cortizacion.service'
 import {HttpClientModule} from '@angular/common/http'
 import {MatDialogModule} from '@angular/material/dialog';
+import { EducationComponent } from './components/education/education.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     WhyComponent,
     FaqComponent,
     EmbajadorComponent,
-    JoinComponent
+    JoinComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
